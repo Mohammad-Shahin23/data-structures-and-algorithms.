@@ -4,5 +4,5 @@
 
 |   Class     |     Link    |
 | ----------- | ----------- |
-|  Class-01   | [Read-01]https://github.com/Mohammad-Shahin23/reading-notes/blob/main/reading_notes/Read_Class%2001.md |
-|  Class-02   | [Read-02]https://github.com/Mohammad-Shahin23/reading-notes/blob/main/reading_notes/Read-Class%2002.md |
+|  Class-01   | [Code-Challange-01]https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/reverce_array/README.md |
+|  Class-02   | [Code-Challange-02]https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/array-insert-shift/README.md |
