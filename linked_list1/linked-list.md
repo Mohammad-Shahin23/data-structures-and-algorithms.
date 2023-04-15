@@ -13,4 +13,4 @@ So in this challenge, we're going to be building a linked list data structure an
 
 
 ## Solution
-[](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./pull/1) |
+[Linked List Solution ](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/linked_list1/linked_list.py)
