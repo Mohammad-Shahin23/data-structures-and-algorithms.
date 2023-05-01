@@ -1,4 +1,4 @@
-#!/home/shahin/asac/Lab-Class-01/data-structures-and-algorithms/.venv/bin/python3
+#!/home/shahin/asac/Lab-Class-01/data-structures-and-algorithms/.venv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
