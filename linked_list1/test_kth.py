@@ -1,22 +1,32 @@
 import pytest
 from linked_list import LinkedList, Node
 
+def test_kth_from_end_greater_than_length():
+    ll = LinkedList()
+    ll.head = Node(1)
+    assert ll.kth_from_end(2) == None
 
-def test_1(AA):
-    expected= "Error : Your input can't be more than the length" 
-    actual = AA.kthFromEnd(4)
-    assert  expected == actual  
-def test_2(AA):
-    expected= "Error : Your input can't be more than the length" 
-    actual = AA.kthFromEnd(7)
-    assert  expected == actual  
+def test_kth_from_end_same_length():
+    ll = LinkedList()
+    ll.head = Node(1)
+    ll.head.next = Node(2)
+    assert ll.kth_from_end(2) == 1
 
-def test_3():
-    LL= LinkedList()
-    LL.insert("A")
-    assert LL.kthFromEnd(0) == "A"
 
-def test_4(AA):
-    expected= "C" 
-    actual = AA.kthFromEnd(2)
-    assert  expected == actual  
+def test_kth_from_end_not_positive_integer():
+    ll = LinkedList()
+    ll.head = Node(1)
+    assert ll.kth_from_end(-1) == None
+
+def test_kth_from_end_size_1():
+    ll = LinkedList()
+    ll.head = Node(1)
+    assert ll.kth_from_end(1) == 1
+
+def test_kth_from_end_happy_path():
+    ll = LinkedList()
+    ll.head = Node(1)
+    ll.head.next = Node(2)
+    ll.head.next.next = Node(3)
+    ll.head.next.next.next = Node(4)
+    assert ll.kth_from_end(2) == 3
