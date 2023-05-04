@@ -9,8 +9,8 @@
 |  Class-03   | [Code-Challange-03](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/array-binary-search/array-binary-search%20.md) |
 |  Class-04   | [Code-Challange-04](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/Sum_matrixs/Sum_matrixs.md) |
 |  Class-05   | [Code-Challange-05](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/linked_list1/linked-list.md) |
-|  Class-07   | [Code-Challange-07](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/linked_list1/linked-list_kth.md) |
-|  Class-08   | [Code-Challange-08](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/linked_list1/linked-list_zip.md) |
+|  Class-07   | [Code-Challange-07](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/linked_list1/linked_list_kth.md) |
+|  Class-08   | [Code-Challange-08](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/linked_list1/linked_list_zip.md)|
 |  Class-09   | [Code-Challange-09](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/Interview/palindrome_LinkedList.md) |
 
 
