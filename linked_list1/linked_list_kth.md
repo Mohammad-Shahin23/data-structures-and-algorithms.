@@ -1,8 +1,7 @@
 # Code Chalenge 07
 kth from end
-
-arguments: k returns the node’s value that is k places from the tail of the linked list.
-zip lists
+ The value of the kth node from the end of the linked list, or None if the linked list is empty, k is not a positive integer,
+ or k is greater than or equal to the length of the linked list.
 ![MarineGEO circle logo](/linked_list1/kth.png)
 
 

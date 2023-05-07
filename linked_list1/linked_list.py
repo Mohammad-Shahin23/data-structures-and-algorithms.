@@ -6,28 +6,23 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
+   
 
-    def __str__(self):
-        return self.to_string()
     
-    def append(self,value):
-        """Adds a new node with that value to the end of the list 
-        Args:
-            value: value of the new node
-            
-            Returns: nothing
-            
-            Raises: nothing"""
+    
+    def append(self, value):
+        new_node = Node(value)
 
-        node = Node(value)
-        
-        if self.head is None:
-            self.head = node
-        else:
-            current = self.head
-            while current.next is not None:
-                current = current.next
-            current.next = node
+        if not self.head:
+            self.head = new_node
+            return
+
+        current = self.head
+        while current.next:
+            current = current.next
+
+        current.next = new_node
+
 
     def insert(self, data):
         """Inserts a new node with that value before the first node of the list
@@ -155,28 +150,38 @@ class LinkedList:
         previous_node.next = current_node.next
         current_node = None
 
-    def kth_From_End(self,k):
-        if self.head is None:
-            return "Error : the linked list is empty"
-        elif k >= LinkedList.count:
-            return "Error : Your input can't be more than the length"  
-        elif k < 0 :
-            return "Error : only positive numbers are accepted!"
-        elif LinkedList.count == 1:
-            return self.head.value
-        else:        
-         pointer_one = self.head
-         pointer_two = self.head
+    def kth_from_end(self, k):
+        """
+         Args:
+            - k : The index of the node to return, where k = 1 returns the last node, k = 2 returns the second-last node, and so on.
+        Returns:
+            - The value of the kth node from the end of the linked list, or None if the linked list is empty, k is not a positive integer,
+            or k is greater than or equal to the length of the linked list.
+        """
+        # Check if k is a positive and is an integer
+        if type(k) != int or k <= 0:
+            return None
+        
+         # Check if the linked list is empty
+        if not self.head:
+            return None
 
-         for i in range(k):
-            pointer_two = pointer_two.next
+        # Calculate the length of the linked list
+        length = 0
+        current = self.head
+        while current:
+            length += 1
+            current = current.next
+        # Check if k is greater than or equal to the length of the linked lis
+        if k >= length:
+            return None
+        
+        # Traverse the linked list to find the kth node from the end
+        current = self.head
+        for i in range(length - k - 1):
+            current = current.next
 
-         while pointer_two.next is not None:
-           pointer_one = pointer_one.next
-           pointer_two = pointer_two.next
-
-         return pointer_one.value
-
+        return current.value
     # def kth_from_end(self, k):
     #     if k <= 0:
     #         return None
@@ -256,6 +261,18 @@ class LinkedList:
     #         list2_current = list2_next
     #     return list1
 
-
+         
+def __str__(self):
+        output = ""
+        if self.head is None:
+            output = "Empty LinkeList"
+        else:
+            current = self.head
+            while(current):
+                output += f'{current.value} -> '
+                current = current.next
+            
+            output += " Null"
+        return output  
 
 
