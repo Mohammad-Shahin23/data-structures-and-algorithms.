@@ -30,8 +30,8 @@
 |  Class-03   | [PullRequest-Challange-03](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./pull/6) |
 |  Class-04   | [PullRequest-Challange-04](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./pull/8) |
 |  Class-05   | [PullRequest-Challange-05](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./pull/11) |
-|  Class-07   | [PullRequest-Challange-07](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./pull/15) |
-|  Class-08   | [PullRequest-Challange-08](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./pull/15) |
+|  Class-07   | [PullRequest-Challange-07](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./pull/18/) |
+|  Class-08   | [PullRequest-Challange-08](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./pull/19) |
 |  Class-09   | [PullRequest-Challange-09](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./pull/16) |
 |  Class-10   | [PullRequest-Challange-10](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./pull/17) |
 
