@@ -1,52 +1,42 @@
-import pytest
-from linked_list import LinkedList, Node
+from linked_list import LinkedList
 
+def test_zip_lists():
+    # Test case 1 - zipping two empty linked lists should return an empty linked list
+    list1 = LinkedList()
+    list2 = LinkedList()
+    result = list1.zip_lists(list1, list2)
+    assert result.to_list() == []
+def test_zip_lists2():
+    # Test case 2 - zipping one empty linked list with a non-empty linked list should return the non-empty linked list
+    list1 = LinkedList()
+    list2 = LinkedList()
+    list2.append(1)
+    list2.append(2)
+    list2.append(3)
+    result = list1.zip_lists(list1, list2)
+    assert result.to_list() == [1, 2, 3]
 
-def test_zipLists1():
-    linked_list1 = LinkedList()
-    linked_list1.append(1)
-    linked_list1.append(3)
-    linked_list1.append(2)
-    linked_list2 = LinkedList()
-    linked_list2.append(5)
-    linked_list2.append(9)
-    linked_list2.append(4)
-    zipList = linked_list1.zipLists(linked_list1, linked_list2)
-    assert zipList.to_string() == "{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL"
+def test_zip_lists3():
+    # Test case 3 - zipping two linked lists with the same length should result in a new linked list with alternating nodes
+    list1 = LinkedList()
+    list2 = LinkedList()
+    list1.append(1)
+    list1.append(3)
+    list1.append(5)
+    list2.append(2)
+    list2.append(4)
+    list2.append(6)
+    result = list1.zip_lists(list1, list2)
+    assert result.to_list() == [1, 2, 3, 4, 5, 6]
 
-def test_zipLists2():
-    linked_list1 = LinkedList()
-    linked_list1.append(1)
-    linked_list1.append(3)
-    linked_list2 = LinkedList()
-    linked_list2.append(5)
-    linked_list2.append(9)
-    linked_list2.append(4)
-    zipList = linked_list1.zipLists(linked_list1, linked_list2)
-    assert zipList.to_string() == "{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 4 } -> NULL"
-
-def test_zipLists3():
-    linked_list1 = LinkedList()
-    linked_list1.append(1)
-    linked_list1.append(3)
-    linked_list1.append(2)
-    linked_list2 = LinkedList()
-    linked_list2.append(5)
-    linked_list2.append(9)
-    zipList = linked_list1.zipLists(linked_list1, linked_list2)
-    assert zipList.to_string() == "{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> NULL"
-
-def test_zipLists_one_list_is_null():
-    linked_list1 = LinkedList()
-    linked_list1.append(1)
-    linked_list1.append(3)
-    linked_list1.append(2)
-    linked_list2 = LinkedList()
-    zipList = linked_list1.zipLists(linked_list1, linked_list2)
-    assert zipList.to_string() == "{ 1 } -> { 3 } -> { 2 } -> NULL"
-
-def test_zipLists_both_lists_are_null():
-    linked_list1 = LinkedList()
-    linked_list2 = LinkedList()
-    zipList = linked_list1.zipLists(linked_list1, linked_list2)
-    assert zipList.to_string() == "NULL"
+def test_zip_lists4():
+    # Test case 4 - zipping two linked lists with different lengths should result in a new linked list with all nodes from both lists
+    list1 = LinkedList()
+    list2 = LinkedList()
+    list1.append(1)
+    list1.append(2)
+    list2.append(3)
+    list2.append(4)
+    list2.append(5)
+    result = list1.zip_lists(list1, list2)
+    assert result.to_list() == [1, 3, 2, 4, 5]
