@@ -6,28 +6,23 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
+   
 
-    def __str__(self):
-        return self.to_string()
     
-    def append(self,value):
-        """Adds a new node with that value to the end of the list 
-        Args:
-            value: value of the new node
-            
-            Returns: nothing
-            
-            Raises: nothing"""
+    
+    def append(self, value):
+        new_node = Node(value)
 
-        node = Node(value)
-        
-        if self.head is None:
-            self.head = node
-        else:
-            current = self.head
-            while current.next is not None:
-                current = current.next
-            current.next = node
+        if not self.head:
+            self.head = new_node
+            return
+
+        current = self.head
+        while current.next:
+            current = current.next
+
+        current.next = new_node
+
 
     def insert(self, data):
         """Inserts a new node with that value before the first node of the list
@@ -156,80 +151,128 @@ class LinkedList:
         current_node = None
 
     def kth_from_end(self, k):
-        if k <= 0:
+        """
+         Args:
+            - k : The index of the node to return, where k = 1 returns the last node, k = 2 returns the second-last node, and so on.
+        Returns:
+            - The value of the kth node from the end of the linked list, or None if the linked list is empty, k is not a positive integer,
+            or k is greater than or equal to the length of the linked list.
+        """
+        # Check if k is a positive and is an integer
+        if type(k) != int or k <= 0:
+            return None
+        
+         # Check if the linked list is empty
+        if not self.head:
             return None
 
-        # Get the length of the linked list
+        # Calculate the length of the linked list
         length = 0
         current = self.head
         while current:
             length += 1
             current = current.next
-
-        if k > length:
+        # Check if k is greater than or equal to the length of the linked lis
+        if k >= length:
             return None
-
-        # Calculate the position of the kth node from the beginning
-        position = length - k
-
-        # Traverse the linked list to find the kth node from the beginning
+        
+        # Traverse the linked list to find the kth node from the end
         current = self.head
-        for i in range(position):
+        for i in range(length - k - 1):
             current = current.next
 
         return current.value
+    # def kth_from_end(self, k):
+    #     if k <= 0:
+    #         return None
 
-    def find_middle(self):
-        if not self.head:
-            return None
+    #     # Get the length of the linked list
+    #     length = 0
+    #     current = self.head
+    #     while current:
+    #         length += 1
+    #         current = current.next
 
-        slow = self.head
-        fast = self.head
+    #     if k > length:
+    #         return None
 
-        # Traverse the linked list using two pointers,
-        # one moving at half the speed of the other.
-        # When the fast pointer reaches the end of the
-        # list, the slow pointer will be at the middle node.
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
+    #     # Calculate the position of the kth node from the beginning
+    #     position = length - k
 
-        return slow.value
+    #     # Traverse the linked list to find the kth node from the beginning
+    #     current = self.head
+    #     for i in range(position):
+    #         current = current.next
+
+    #     return current.value
+
+    # def find_middle(self):
+    #     if not self.head:
+    #         return None
+
+    #     slow = self.head
+    #     fast = self.head
+
+    #     # Traverse the linked list using two pointers,
+    #     # one moving at half the speed of the other.
+    #     # When the fast pointer reaches the end of the
+    #     # list, the slow pointer will be at the middle node.
+    #     while fast and fast.next:
+    #         slow = slow.next
+    #         fast = fast.next.next
+
+    #     return slow.value
 
     
     
     
 
-    @staticmethod
-    def zipLists(list1:'LinkedList', list2:'LinkedList'):
-        """
-        Zips two linked lists together into one linked list, alternating between nodes from each list.
-        Parameters:
-        ----------
-        list1 : LinkedList
-            The first linked list to zip.
-        list2 : LinkedList
-            The second linked list to zip.
-        Returns:
-        -------
-        LinkedList
-            A new linked list containing the zipped nodes.
-        """
+    # @staticmethod
+    # def zipLists(list1:'LinkedList', list2:'LinkedList'):
+    #     """
+    #     Zips two linked lists together into one linked list, alternating between nodes from each list.
+    #     Parameters:
+    #     ----------
+    #     list1 : LinkedList
+    #         The first linked list to zip.
+    #     list2 : LinkedList
+    #         The second linked list to zip.
+    #     Returns:
+    #     -------
+    #     LinkedList
+    #         A new linked list containing the zipped nodes.
+    #     """
         
         
-        if list1.head is None:
-            return list2
-        if list2.head is None:
-            return list1
-        list1_current = list1.head
-        list2_current = list2.head
-        while list1_current and list2_current:
-            list1_next = list1_current.next
-            list2_next = list2_current.next
-            list1_current.next = list2_current
-            if list1_next is None:
-                break
-            list2_current.next = list1_next
-            list1_current = list1_next
-            list2_current = list2_next
-        return list1
+    #     if list1.head is None:
+    #         return list2
+    #     if list2.head is None:
+    #         return list1
+    #     list1_current = list1.head
+    #     list2_current = list2.head
+    #     while list1_current and list2_current:
+    #         list1_next = list1_current.next
+    #         list2_next = list2_current.next
+    #         list1_current.next = list2_current
+    #         if list1_next is None:
+    #             break
+    #         list2_current.next = list1_next
+    #         list1_current = list1_next
+    #         list2_current = list2_next
+    #     return list1
+
+         
+def __str__(self):
+        output = ""
+        if self.head is None:
+            output = "Empty LinkeList"
+        else:
+            current = self.head
+            while(current):
+                output += f'{current.value} -> '
+                current = current.next
+            
+            output += " Null"
+        return output  
+
+
