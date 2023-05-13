@@ -1,63 +1,61 @@
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
+from node import Node
+from linked_list import Linkedlist
 
-class Queue:
+class Queue :
     def __init__(self):
-        """Initializes an empty Queue with front and rear set to None."""
-        self.front = None
-        self.rear = None
+        self.linkedlist = Linkedlist()
+    
+    def __str__(self):
+        return str(self.linkedlist)
+    
+        
+    def isEmpty(self):
+        """
+            this method cheeks if the linked list is empty or not
+
+        """
+        if self.linkedlist.head is None:
+            return True
+        else:
+            return False
+    
         
     def enqueue(self, value):
-        """Adds an element to the rear end of the Queue.
 
-        Args:
-        - value: The value of the element to be added to the Queue.
-
-        Returns: None
         """
-        node = Node(value)
-        if not self.front:
-            self.front = node
-        else:
-            self.rear.next = node
-        self.rear = node
+            this method adds a new node at the end of the linked list 
+        """
         
+        node = Node(value)
+        if self.linkedlist.head is None:
+            self.linkedlist.head = node 
+            self.linkedlist.tail = node
+        else:
+            self.linkedlist.tail.next = node
+            self.linkedlist.tail = node
+
     def dequeue(self):
-        """Removes and returns an element from the front end of the Queue.
-
-        Returns:
-        - The value of the element that was removed from the front end of the Queue.
-
-        Raises:
-        - IndexError: If the Queue is empty.
         """
-        if not self.front:
-            raise IndexError("This Queue is Empty!!!")
-        node = self.front
-        self.front = self.front.next
-        if not self.front:
-            self.rear = None
-        return node.value
-    
+            this method removes the first node from the begining of the linked list
+        """
+
+        if self.isEmpty() or self.linkedlist.head is None:
+            raise Exception("the queue is empty")
+        else:
+            tempNode = self.linkedlist.head.value
+            if self.linkedlist.head == self.linkedlist.tail:
+                self.linkedlist.head = None
+                self.linkedlist.tail  = None
+            else:
+                self.linkedlist.head = self.linkedlist.head.next
+            return(tempNode)
+        
     def peek(self):
-        """Returns the value of the element at the front end of the Queue without removing it.
-
-        Returns:
-        - The value of the element at the front end of the Queue.
-
-        Raises:
-        - IndexError: If the Queue is empty.
         """
-        if not self.front:
-            raise IndexError("This Queue is Empty!!!")
-        return self.front.value
-    
-    def is_empty(self):
-        """Checks if the Queue is empty.
-
-        Returns:
-        - True if the Queue is empty, False otherwise.
+           this method returns the first element in the list
         """
-        return not bool(self.front)
+        if  self.isEmpty() or self.linkedlist.head is None:
+            raise Exception("the queue is empty")
+        else:
+            return self.linkedlist.head.value
+        

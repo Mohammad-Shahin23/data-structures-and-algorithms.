@@ -1,6 +1,6 @@
 import pytest
-from stack_and_queue.stack import *
-from stack_and_queue.queue import *
+from stack import Stack
+from queue import Queue
 
 def test_stack_push():
     stack = Stack()
