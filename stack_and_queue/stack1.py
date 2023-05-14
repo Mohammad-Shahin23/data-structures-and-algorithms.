@@ -1,10 +1,16 @@
-from node import Node
-from linked_list import Linkedlist
+
+from stack_and_queue.linked_list import Linkedlist
+
+class Node:
+    def __init__(self, value ):
+        self.value = value
+        self.next = None
 
 
 class Stack:
     def __init__ (self):
         self.Linkedlist = Linkedlist()
+       
 
     def __str__(self):
         return str(self.Linkedlist)
@@ -25,6 +31,7 @@ class Stack:
             this method will add the value at the top of the stack by making a new nood 
             then coecting it to the head and the next value.
         """
+        
         node = Node(value)
         node.next= self.Linkedlist.head 
         self.Linkedlist.head = node
