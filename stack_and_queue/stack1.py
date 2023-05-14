@@ -7,7 +7,7 @@ class Node:
         self.next = None
 
 
-class Stack:
+class Stack1:
     def __init__ (self):
         self.Linkedlist = Linkedlist()
        
