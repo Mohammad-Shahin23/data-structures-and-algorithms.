@@ -1,7 +1,12 @@
-from node import Node
-from linked_list import Linkedlist
 
-class Queue :
+from stack_and_queue.linked_list import Linkedlist
+
+class Node:
+    def __init__(self, value ):
+        self.value = value
+        self.next = None
+
+class Queue1 :
     def __init__(self):
         self.linkedlist = Linkedlist()
     
@@ -40,7 +45,7 @@ class Queue :
         """
 
         if self.isEmpty() or self.linkedlist.head is None:
-            raise Exception("the queue is empty")
+            raise IndexError("the queue is empty")
         else:
             tempNode = self.linkedlist.head.value
             if self.linkedlist.head == self.linkedlist.tail:
@@ -55,7 +60,7 @@ class Queue :
            this method returns the first element in the list
         """
         if  self.isEmpty() or self.linkedlist.head is None:
-            raise Exception("the queue is empty")
+            raise IndexError("the queue is empty")
         else:
             return self.linkedlist.head.value
         

@@ -3,7 +3,7 @@ from stack_and_queue.pseudo import PseudoQueue
 def test_enqueue_single_element():
     queue = PseudoQueue()
     queue.enqueue(5)
-    assert queue.stackA.stack == [5]
+    assert queue.stackA.Linkedlist == [5]
     assert queue.stackB.stack == []
 
 def test_enqueue_multiple_elements():
