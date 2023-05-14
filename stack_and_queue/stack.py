@@ -1,47 +1,60 @@
-class Node:
-    def __init__(self,value):
-        self.value = value
-        self.next = None
+from node import Node
+from linked_list import Linkedlist
+
 
 class Stack:
-    """
-    A simple implementation of a Stack using a Python list.
+    def __init__ (self):
+        self.Linkedlist = Linkedlist()
 
-    Stack:
-    A data structure that stores a collection of elements, where elements are added and removed from the same end (top).
-    """
-    def __init__(self):
-        """
-          Initializes an empty Stack.
-        """
-        self.stack = []
+    def __str__(self):
+        return str(self.Linkedlist)
+    
+   
 
+    def isEmpty(self):
+        """ this method will return the boolean true of the stack is empty
+            and false if its not 
+        """
+        if self.Linkedlist.head is None:
+            return True
+        else:
+            return False
+        
     def push(self, value):
-        """ 
-        Adds an element to the top of the Stack.
         """
-        self.stack.append(value)
-
+            this method will add the value at the top of the stack by making a new nood 
+            then coecting it to the head and the next value.
+        """
+        node = Node(value)
+        node.next= self.Linkedlist.head 
+        self.Linkedlist.head = node
+    
     def pop(self):
         """
-          Removes and returns the top element of the Stack.
+        this method will delet rhe first node in the linked list
         """
-        if self.is_empty():
-            raise IndexError("This Stack is Empty!!!")
+        if self.Linkedlist.head is None:
+            raise IndexError("the list is empty!!")
         else:
-            return self.stack.pop()
-
+            popValue =self.Linkedlist.head.value
+            self.Linkedlist.head = self.Linkedlist.head.next
+            return popValue
     def peek(self):
-        """ 
-            Returns the value of the top element of the Stack without removing it.
         """
-        if self.is_empty():
-            raise IndexError("This Stack is Empty!!!")
-        else:
-            return self.stack[-1]
+        this method will return the first element in the linked list without removing it 
 
-    def is_empty(self):
         """
-            Checks if the Stack is empty
+        if self.Linkedlist.head is None:
+            raise IndexError ("the stack is empty")
+        else:
+            headValue = self.Linkedlist.head.value
+            return headValue
+    
+    def delete(self):
         """
-        return len(self.stack) == 0
+        this method will delet the stack by changing the head value to null
+        """
+        self.Linkedlist.head = None
+
+
+        
