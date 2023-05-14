@@ -29,7 +29,7 @@ class PseudoQueue:
         
     def enqueue(self, value):
         """
-        Adds an element to the end of the queue using a first-in, first-out approach.
+        Adds an element to the end of the queue using a first-in, last-out approach.
         """
         self.stackA.push(value)
 
@@ -38,7 +38,9 @@ class PseudoQueue:
             
     def dequeue(self):
         """
-        Removes and returns the element at the front of the queue using a first-in, first-out approach.
+        Add the remaining nodes to StackB
+        Then Removes and returns the element at the front of the queue using a first-in, last-out approach.
+        
 
         """
         if self.stackA.isEmpty() and self.stackB.isEmpty():
