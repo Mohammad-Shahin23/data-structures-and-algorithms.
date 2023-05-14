@@ -29,60 +29,120 @@ If the stack is empty, an IndexError is raised.
 | `denqueue` | O(1)        | O(1)             |
 
 ## Solution
-    class Queue:
-        def __init__(self):
-            self.front=None
-            self.rear=None
-        def enqueue(self,value):
-            node = Node(value)
-            if self.front is None:
-                self.front = node
-                self.rear=node
-            else:
-                self.rear.next = node
-                self.rear = node
-        def dequeue(self):
-            if self.front is None:
-                raise IndexError("This Queue is Empty!!!")
-            if self.front == self.rear:
-                temp = self.front
-                self.front = None
-                self.rear = None
-                return temp.value
-            else:
-                temp = self.front
-                self.front = self.front.next
-                return temp.value
-        def peek(self):
-            if self.front is None:
-                raise IndexError("This Queue is Empty!!!")
-            else:
-                return self.front.value
-        def is_empty(self):
-            return not bool(self.front)
+    class Queue1 :
+    def __init__(self):
+        self.linkedlist = Linkedlist()
+    
+    def __str__(self):
+        return str(self.linkedlist)
+    
+        
+    def isEmpty(self):
+        """
+            this method cheeks if the linked list is empty or not
 
-    class Stack:
-        def __init__(self):
-            self.top = None
-        def push(self, value):
-            node = Node(value)
-            if self.top == None:
-                self.top = node
+        """
+        if self.linkedlist.head is None:
+            return True
+        else:
+            return False
+    
+        
+    def enqueue(self, value):
+
+        """
+            this method adds a new node at the end of the linked list 
+        """
+        
+        node = Node(value)
+        if self.linkedlist.head is None:
+            self.linkedlist.head = node 
+            self.linkedlist.tail = node
+        else:
+            self.linkedlist.tail.next = node
+            self.linkedlist.tail = node
+
+    def dequeue(self):
+        """
+            this method removes the first node from the begining of the linked list
+        """
+
+        if self.isEmpty() or self.linkedlist.head is None:
+            raise IndexError("the queue is empty")
+        else:
+            tempNode = self.linkedlist.head.value
+            if self.linkedlist.head == self.linkedlist.tail:
+                self.linkedlist.head = None
+                self.linkedlist.tail  = None
             else:
-                node.next = self.top
-                self.top = node
-        def pop(self):
-            if self.top == None:
-                raise IndexError("This Stack is Empty!!!")
-            else:
-                temp = self.top
-                self.top = self.top.next
-                return temp.value
-        def peek(self):
-            if self.top == None:
-                raise IndexError("This Stack is Empty!!!")
-            else:
-                return self.top.value
-        def is_empty(self):
-            return not bool(self.top)
+                self.linkedlist.head = self.linkedlist.head.next
+            return(tempNode)
+        
+    def peek(self):
+        """
+           this method returns the first element in the list
+        """
+        if  self.isEmpty() or self.linkedlist.head is None:
+            raise IndexError("the queue is empty")
+        else:
+            return self.linkedlist.head.value
+
+
+
+
+    class Stack1:
+    def __init__ (self):
+        self.Linkedlist = Linkedlist()
+       
+
+    def __str__(self):
+        return str(self.Linkedlist)
+    
+   
+
+    def isEmpty(self):
+        """ this method will return the boolean true of the stack is empty
+            and false if its not 
+        """
+        if self.Linkedlist.head is None:
+            return True
+        else:
+            return False
+        
+    def push(self, value):
+        """
+            this method will add the value at the top of the stack by making a new nood 
+            then coecting it to the head and the next value.
+        """
+        
+        node = Node(value)
+        node.next= self.Linkedlist.head 
+        self.Linkedlist.head = node
+    
+    def pop(self):
+        """
+        this method will delet rhe first node in the linked list
+        """
+        if self.Linkedlist.head is None:
+            raise IndexError("the list is empty!!")
+        else:
+            popValue =self.Linkedlist.head.value
+            self.Linkedlist.head = self.Linkedlist.head.next
+            return popValue
+    def peek(self):
+        """
+        this method will return the first element in the linked list without removing it 
+
+        """
+        if self.Linkedlist.head is None:
+            raise IndexError ("the stack is empty")
+        else:
+            headValue = self.Linkedlist.head.value
+            return headValue
+    
+    def delete(self):
+        """
+        this method will delet the stack by changing the head value to null
+        """
+        self.Linkedlist.head = None
 
