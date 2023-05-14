@@ -1,5 +1,5 @@
 
-from stack_and_queue.stack1 import Stack
+from stack_and_queue.stack1 import Stack1
 
 
 class Node:
@@ -21,47 +21,57 @@ class PseudoQueue:
         """
         Initializes a PseudoQueue instance with an empty primary and secondary stack.
         """
-        self.stackA = Stack()
-        self.stackB = Stack()
+        self.stackA = Stack1()
+        self.stackB = Stack1()
 
     def __str__(self):
-        return str(self.stackA.Linkedlist)
+        return str(self.stackA.Linkedlist) + "\n" + str(self.stackB.Linkedlist)
         
     def enqueue(self, value):
         """
         Adds an element to the end of the queue using a first-in, first-out approach.
         """
-        node = Node(value)
+        self.stackA.push(value)
 
-        
-        
-        if self.stackA.Linkedlist.head is None:
-            self.stackA.Linkedlist.head = node 
-            self.stackA.Linkedlist.tail = node
-        else:
-            self.stackA.Linkedlist.tail.next = node
-            self.stackA.Linkedlist.tail = node
+
+
             
-    # def dequeue(self):
-    #     """
-    #     Removes and returns the element at the front of the queue using a first-in, first-out approach.
+    def dequeue(self):
+        """
+        Removes and returns the element at the front of the queue using a first-in, first-out approach.
 
-    #     """
-    #     if self.stackA.Linkedlist is None and self.stackB.Linkedlist is None:
-    #         return None
-    #     else:
-    #         tempNode = self.stackA.Linkedlist.head.value
-    #         if self.stackA.Linkedlist.head == self.stackA.Linkedlist.tail:
-    #             self.stackA.Linkedlist.head = None
-    #             self.stackA.Linkedlist.tail  = None
-    #         else:
-    #             self.stackA.Linkedlist.head = self.stackA.Linkedlist.head.next
-    #         # return(tempNode)
+        """
+        if self.stackA.isEmpty() and self.stackB.isEmpty():
+            return("Queue is empty")
+        if self.stackB.isEmpty():
+            while not self.stackA.isEmpty():
+                self.stackB.push(self.stackA.pop())
+
+        return self.stackB.pop()
+
         
-    #     if self.stackA.Linkedlist != None and self.stackB.Linkedlist.isEmpty():
-    #         while not self.stackA.Linkedlist is None:
-    #              self.stackB.Linkedlist.push(tempNode)
-    #     return(tempNode)
+       
+
+
+
+
+
+
+        # if self.stackA.Linkedlist is None and self.stackB.Linkedlist is None:
+        #     return None
+        # else:
+        #     tempNode = self.stackA.Linkedlist.head.value
+        #     if self.stackA.Linkedlist.head == self.stackA.Linkedlist.tail:
+        #         self.stackA.Linkedlist.head = None
+        #         self.stackA.Linkedlist.tail  = None
+        #     else:
+        #         self.stackA.Linkedlist.head = self.stackA.Linkedlist.head.next
+        #     # return(tempNode)
+        
+        # if self.stackA.Linkedlist != None and self.stackB.Linkedlist.isEmpty():
+        #     while not self.stackA.Linkedlist is None:
+        #          self.stackB.Linkedlist.push(tempNode)
+        # return(tempNode)
 
 
 

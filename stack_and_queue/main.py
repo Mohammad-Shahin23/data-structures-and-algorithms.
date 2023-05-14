@@ -1,5 +1,5 @@
 # from stack import Stack
-from pseudo import PseudoQueue
+from stack_and_queue.pseudo import PseudoQueue
 # from queue import Queue
 
 
@@ -40,20 +40,25 @@ from pseudo import PseudoQueue
 # print(queue1.peek())
 
 #.........................pseudo.......................
-if __name__ == "__main__":
 
-    pseudoA = PseudoQueue()
-    pseudoB = PseudoQueue()
 
-    pseudoA.enqueue(1)
-    pseudoA.enqueue(2)
-    pseudoA.enqueue(3)
-    print(pseudoA)
+pseudoA = PseudoQueue()
+pseudoB = PseudoQueue()
 
-    # pseudoB.enqueue(1)
-    # pseudoB.enqueue(2)
-    # pseudoB.enqueue(3)
-    # print(pseudoB.dequeue())
+# pseudoA.enqueue(1)
+# pseudoA.enqueue(2)
+# pseudoA.enqueue(3)
+# print(pseudoA)
+
+pseudoB.enqueue(1)
+pseudoB.enqueue(2)
+pseudoB.enqueue(3)
+print(pseudoB)
+print(pseudoB.dequeue())
+print(pseudoB)
+
+print(pseudoB.dequeue())
+print(pseudoB)
 
 
 
