@@ -1,4 +1,4 @@
-from stack_and_queue.pseudo import PseudoQueue
+from pseudo import PseudoQueue
 
 
 

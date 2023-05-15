@@ -3,7 +3,7 @@
 The problem is to implement a queue data structure using two stacks in Python, where elements are added to one stack and removed from the other stack, using a first-in, first-out (FIFO) approach. The goal is to simulate the behavior of a queue using only stacks.
 
 # White Bord Class-11: pseudo
-![MarineGEO circle logo](/stack_and_queue/Screenshot%202023-05-08%20225721.png)
+![MarineGEO circle logo](/stack_and_queue/png/Screenshot%202023-05-08%20225721.png)
 
 
 

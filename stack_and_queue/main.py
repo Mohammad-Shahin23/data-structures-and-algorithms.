@@ -1,5 +1,5 @@
 # from stack import Stack
-from stack_and_queue.pseudo import PseudoQueue
+from pseudo import PseudoQueue
 # from queue import Queue
 
 

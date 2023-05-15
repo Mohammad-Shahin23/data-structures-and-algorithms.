@@ -1,5 +1,5 @@
 
-from stack_and_queue.linked_list import Linkedlist
+from linked_list import Linkedlist
 
 class Node:
     def __init__(self, value ):
