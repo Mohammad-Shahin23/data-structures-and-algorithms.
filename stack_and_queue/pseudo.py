@@ -1,5 +1,5 @@
 
-from stack_and_queue.stack1 import Stack1
+from stack1 import Stack1
 
 
 class Node:
