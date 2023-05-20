@@ -55,12 +55,12 @@ class BTS(Tree1):
             self.value = num
         elif num <= self.value:
             if self.left is None:
-                self.left = Tree_Node(num)
+                self.left = BTS(num)
             else:
                 self.left.add(num)
         else:
             if self.right is None:
-                self.right = Tree_Node(num)
+                self.right = BTS(num)
             else:
                 self.right.add(num)
 
@@ -99,8 +99,7 @@ BTS_list= []
 
 
 
-print(newBTS.contains(50))
-print(newBTS.right.value)
+
 # expected_result = [5, 3, 2, 4, 7, 6, 8]
 # assert(tree.pre_order(), expected_result)
 
