@@ -15,6 +15,7 @@
 |  Class-10   | [Code-Challange-10](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/stack_and_queue/stack_and_queue.md) |
 |  Class-11   | [Code-Challange-11](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/stack_and_queue/pseudo.md) |
 |  Class-12   | [Code-Challange-12](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/stack_and_queue/stack_queue_animal_shelter.md) |
+|  Class-13   | [Code-Challange-13](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/stack_and_queue/stack_queue_animal_shelter.md) |
 
 
 
