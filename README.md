@@ -17,6 +17,7 @@
 |  Class-12   | [Code-Challange-12](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/stack_and_queue/stack_queue_animal_shelter.md) |
 |  Class-13   | [Code-Challange-13](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/stack_and_queue/stack_queue_animal_shelter.md) |
 |  Class-15   | [Code-Challange-15](hhttps://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/trees/tree_postOrder_BST.md) |
+|  Class-16   | [Code-Challange-16](hhttps://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/trees/tree_Max.md) |
 
 
 
