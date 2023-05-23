@@ -13,8 +13,8 @@ which will then find the maximum number in a non ordered tree and returns its va
 ## Approach & Efficiency
 | Function | Time Complexity | Space Complexity |
 | -------- | -------------- | ---------------- |
-| `pre_order` | O(logn)        | O (1)             |
-| `Max` | O(n)      | O(1)             |
+| `pre_order` | O(logn)        | O (n)             |
+| `Max` | O(n)      | O(n)             |
 
 ## Solution
     def Max(self):
