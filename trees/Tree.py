@@ -6,15 +6,22 @@ class Tree_Node:
 
 class Tree1:
     def __init__(self):
+        """
+        Initialize an instance of Tree1 with a root node.
+        """
         self.root = None
 
     def pre_order(self):
-        arr=[]
+        """
+        Perform pre-order traversal on the tree and return a list of values in pre-order.
+        """
+        arr = []
         return self._pre_order(self.root, arr)
         
-
-
     def _pre_order(self, root, pre_list):
+        """
+        Helper method for pre_order traversal.
+        """
         if self.root is None:
             return pre_list
         
@@ -27,31 +34,40 @@ class Tree1:
         return pre_list
 
     def in_order(self):
-        arr=[]
+        """
+        Perform in-order traversal on the tree and return a list of values in in-order.
+        """
+        arr = []
         return self._in_order(self.root, arr)
     
     def _in_order(self, root, in_list):
+        """
+        Helper method for in_order traversal.
+        """
         if self.root is None:
             return in_list
         if root.left is not None:
             self._in_order(root.left, in_list)
         if root is not None:
-             in_list.append(root.value)
+            in_list.append(root.value)
         if root.right is not None:
             self._in_order(root.right, in_list)
         return in_list
     
     def post_order(self):
-        arr=[]
+        """
+        Perform post-order traversal on the tree and return a list of values in post-order.
+        """
+        arr = []
         return self._post_order(self.root, arr)
     
-    def _post_order(self, root, post_list= []):
-
+    def _post_order(self, root, post_list=[]):
+        """
+        Helper method for post_order traversal.
+        """
         if self.root is None:
             return post_list
-        """
-        Perform post-order traversal on the tree rooted at the given node.
-        """
+
         if root.left is not None:
             self._post_order(root.left, post_list)
         if root.right is not None:
@@ -61,21 +77,22 @@ class Tree1:
 
         return post_list
 
-
     def Max(self):
-        
+        """
+        Find and return the maximum value in the tree.
+        """
         list_values = self.pre_order()
 
         if len(list_values) == 0:
             return None
         
-        max=list_values[0]
+        max_value = list_values[0]
         
         for value in list_values:
-            if value >= max :
-                max = value
-        return max
-    
+            if value >= max_value:
+                max_value = value
+        return max_value
+
 
 
 
