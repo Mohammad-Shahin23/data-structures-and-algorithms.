@@ -61,7 +61,7 @@ class Tree1:
         arr = []
         return self._post_order(self.root, arr)
     
-    def _post_order(self, root, post_list=[]):
+    def _post_order(self, root, post_list):
         """
         Helper method for post_order traversal.
         """
@@ -92,6 +92,41 @@ class Tree1:
             if value >= max_value:
                 max_value = value
         return max_value
+
+    def breadth(self):
+        """
+        Perform breadth-first traversal on the tree and return a list of values in breadth-first order.
+
+        Returns: list: A list of values in breadth-first order.
+        """
+        arr = []
+        return self._breadth_first(self.root, arr)
+
+    def _breadth_first(self, root, breadth_list):
+        """
+        Helper method for performing breadth-first traversal on the tree.
+
+        Args:
+            root (Tree_Node): The root node of the current subtree.
+            breadth_list (list): The list to store values in breadth-first order.
+
+        Returns: list: A list of values in breadth-first order
+        """
+        if self.root is None:
+            return breadth_list
+
+        queue = [root]
+
+        while queue:
+            root = queue.pop(0)
+            breadth_list.append(root.value)
+
+            if root.left is not None:
+                queue.append(root.left)
+            if root.right is not None:
+                queue.append(root.right)
+
+        return breadth_list
 
 
 
@@ -148,23 +183,23 @@ class BTS(Tree1):
                 return self.right.contains(value)
 
 
-# tree1 = Tree1()
-# node1 = Tree_Node(5)
-# tree1.root = node1
+tree1 = Tree1()
+node1 = Tree_Node(5)
+tree1.root = node1
 
-# node2 = Tree_Node(7)
-# tree1.root.left = node2
+node2 = Tree_Node(7)
+tree1.root.left = node2
 
-# node3 = Tree_Node(9)
-# tree1.root.right = node3
+node3 = Tree_Node(9)
+tree1.root.right = node3
 
-# node4 = Tree_Node(13)
-# tree1.root.left.left = node4
+node4 = Tree_Node(13)
+tree1.root.left.left = node4
 
-# node5 = Tree_Node(20)
-# tree1.root.left.right = node5
+node5 = Tree_Node(20)
+tree1.root.left.right = node5
 
-# node6 = Tree_Node(2)
-# tree1.root.right.left = node6
+node6 = Tree_Node(2)
+tree1.root.right.left = node6
 
-# print(tree1.Max())
+print(tree1.breadth())
