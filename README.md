@@ -19,6 +19,7 @@
 |  Class-15   | [Code-Challange-15](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/trees/tree_postOrder_BST.md) |
 |  Class-16   | [Code-Challange-16](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/trees/tree_Max.md) |
 |  Class-17   | [Code-Challange-17](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/trees/tree_breadth.md) |
+|  Class-26   | [Code-Challange-26](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/Pseudocode/README/insertion.md) |
 
 
 
