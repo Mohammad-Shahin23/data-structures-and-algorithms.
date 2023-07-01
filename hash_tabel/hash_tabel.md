@@ -1,19 +1,33 @@
-from linked_list import LinkedList
+# Code Challenge Class-30: HashTabele
+IThis is a Python implementation of a hash table data structure. A hash table is a data structure that allows efficient storage and retrieval of key-value pairs. It uses a hash function to map keys to indices in an underlying array, called the hash table.
+# White Bord Class-17: HashTabele
 
-class HashTable():
+
+
+
+
+
+
+
+## Approach & Efficiency
+| Function | Time Complexity | Space Complexity |
+| -------- | -------------- | ---------------- |
+| `hash` | O(n)        | O (1)             |
+| `set` | O(1) on average, but it can be O(n) in the worst case    | O(1)             |
+| `get` | O(1) on average, but it can be O(n) in the worst case  | O (1)             |
+| `has` | O(1) on average, but it can be O(n) in the worst case  | O (1)             |
+| `hash`| O(n)        |  O(n)           |
+
+
+## Solution
+
+    class HashTable():
     def __init__(self,size=3):
         self.size = size
         self.map = [None]*size
 
     def hash(self, key):
-        """
-        Hash an arbitrary key and return an integer.
-        Args: 
-            key: the key to be hashed
-        Returns:    
-            The hashed key.
-
-        """
+       
         sum_of_asccii = 0
         for ch in key:
             asccii_of_ch = ord(ch)
@@ -23,14 +37,7 @@ class HashTable():
         return indx
     
     def set(self, key, value):
-        """
-        Store the value with the given key.
-        
-        Args:
-            key: the key to be hashed
-            value: the value to be stored
-        
-        """
+       
         hashed_key = self.hash(key)
         if not self.map[hashed_key]: # if the Bucket is empty
             self.map[hashed_key] = [key,value]
@@ -46,14 +53,7 @@ class HashTable():
                 chain.add(new_pair)
     
     def get(self, key):
-        """ 
-        Get the value associated with a key
-
-        Args:
-            key: the key to look for
-        Returns:    
-            The value associated with the key, or None if the key does not exist.
-        """
+       
         hash = self.hash(key)
         bucket = self.map[hash]
         if bucket is None:
@@ -70,14 +70,7 @@ class HashTable():
                 return bucket[1]
 
     def has(self, key) :
-        """
-        Check if a key exists in the hashtable
-
-        aregs:
-            key: the key to look for
-        Returns:
-            True if the key exists, False otherwise
-        """
+      
         hash = self.hash(key)
         bucket = self.map[hash]
         if bucket is None:
@@ -98,13 +91,7 @@ class HashTable():
 
 
     def keys(self):
-        """
-        Get all the keys in the hashtable
-        aregs:
-            key: the key to look for
-        Returns:   
-            A list of all the keys in the hashtable
-        """
+        
         keys = []
         for bucket in self.map:
             if isinstance(bucket, LinkedList):
