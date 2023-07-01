@@ -21,6 +21,7 @@
 |  Class-17   | [Code-Challange-17](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/trees/tree_breadth.md) |
 |  Class-26   | [Code-Challange-26](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/Pseudocode/README/insertion.md) |
 |  Class-27   | [Code-Challange-27](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/Pseudocode/README/merge_sort.md) |
+|  Class-30   | [Code-Challange-30](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/hash_tabel/hash_tabel.md) |
 
 
 
