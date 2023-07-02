@@ -16,7 +16,7 @@ IThis is a Python implementation of a hash table data structure. A hash table is
 | `set` | O(1) on average, but it can be O(n) in the worst case    | O(1)             |
 | `get` | O(1) on average, but it can be O(n) in the worst case  | O (1)             |
 | `has` | O(1) on average, but it can be O(n) in the worst case  | O (1)             |
-| `hash`| O(n)        |  O(n)           |
+| `keys`| O(n)        |  O(n)           |
 
 
 ## Solution
