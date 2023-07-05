@@ -1,4 +1,4 @@
-from linked_list import LinkedList
+from hash_tabel.linked_list import LinkedList
 
 class HashTable():
     def __init__(self,size=3):
@@ -15,7 +15,7 @@ class HashTable():
 
         """
         sum_of_asccii = 0
-        for ch in key:
+        for ch in str(key):
             asccii_of_ch = ord(ch)
             sum_of_asccii += asccii_of_ch
         temp = sum_of_asccii*599
