@@ -1,4 +1,4 @@
-from Tree import BTS , Tree1 , Tree_Node
+from trees.Tree import BTS , Tree1 , Tree_Node
 
 
 def test_instantiate_empty_tree():
