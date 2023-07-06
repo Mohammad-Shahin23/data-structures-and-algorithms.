@@ -1,7 +1,7 @@
 from hash_tabel.linked_list import LinkedList
 
 class HashTable():
-    def __init__(self,size=3):
+    def __init__(self,size=100):
         self.size = size
         self.map = [None]*size
 
@@ -105,7 +105,7 @@ class HashTable():
         Returns:   
             A list of all the keys in the hashtable
         """
-        keys = []
+        keys = []  
         for bucket in self.map:
             if isinstance(bucket, LinkedList):
                 head = bucket.head

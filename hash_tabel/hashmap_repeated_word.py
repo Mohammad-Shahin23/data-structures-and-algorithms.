@@ -1,5 +1,5 @@
 
-from hashtable import HashTable
+from hash_tabel.hashtable import HashTable
 def repeated_word(string):
     """
     This function takes a long string as an input and returns the first repeated word in the string.
