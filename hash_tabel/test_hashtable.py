@@ -1,5 +1,5 @@
-from hashtable import HashTable
-from hashmap_repeated_word import repeated_word
+from hash_tabel.hashtable import HashTable
+from hash_tabel.hashmap_repeated_word import repeated_word
 
 def test_hash_table():
     tabel1 = HashTable()
