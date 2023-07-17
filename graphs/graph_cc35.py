@@ -72,6 +72,22 @@ class Graph:
         else:
 
             return len(self.adj_list.keys())
+        
+    def breadth_first(self, vertex):
+         queue = []
+         visited = [vertex] 
+         returnd = []
+         queue.append(vertex)
+         while queue: 
+             m = queue.pop(0)
+             returnd.append(m)
+              
+             for neighbour in self.adj_list[m]: 
+                 if neighbour.vertex not in visited:
+                     visited.append(neighbour.vertex)
+                     queue.append(neighbour.vertex)
+
+         return returnd          
     
 
     # def __str__(self):
