@@ -2,6 +2,9 @@
 This is a Python implementation of a Graph data structure. which  allows efficient storage and retrieval of key-value pairs, where the keys are called vertexes and the links are called edges. the key's value are the number of edges which are connected to the vertexs .
 # White Bord Class-35: Graphs
 ![MarineGEO circle logo](/graphs/png/Graps-cc35.png)
+# White Bord Class-36: Graphs BWS
+![MarineGEO circle logo](/graphs/png/screenshot-bws.png)
+
 
 
 
@@ -16,6 +19,7 @@ This is a Python implementation of a Graph data structure. which  allows efficie
 | `show_vertices`  | O(1)    | O (1)           |
 | `show_neighbors` | O(n)    | O(1)            |
 | `size`           | O(1)    | O (1)           |
+| `breadth_first`  |  O(V + E)  | O (v)        |
 
 
 
