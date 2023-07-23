@@ -1,4 +1,5 @@
 from graph_cc35 import Graph
+from graph_business_trip import price
 
 def test_add_node():
     graph1 = Graph()
@@ -68,5 +69,23 @@ def test_breadth_first():
     print(graph1.breadth_first(a))
     assert graph1.breadth_first(a) == [a,b,c,d]
    
+def test_business_trip():
+    graph1 = Graph()
+    a = graph1.add_node("A")
+    b = graph1.add_node("B")
+    c = graph1.add_node("C")
+    d = graph1.add_node("D")
+    graph1.add_edge(a,b,150)
+    graph1.add_edge(a,c,99)
+    graph1.add_edge(c,b,42)
+    graph1.add_edge(d,b,105)
+    graph1.add_edge(d,c,73)
+    assert price(graph1,[a,b]) == 150
+    assert price(graph1,[a,c]) == 99
+    assert price(graph1,[a,b,c]) == 192
+    assert price(graph1,[a,b,d]) == 255
+    assert price(graph1,[a,b,c,d]) == 265
+    assert price(graph1,[a,d]) == None
+    
     
 
