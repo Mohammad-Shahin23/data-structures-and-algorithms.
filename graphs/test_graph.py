@@ -86,6 +86,19 @@ def test_business_trip():
     assert price(graph1,[a,b,d]) == 255
     assert price(graph1,[a,b,c,d]) == 265
     assert price(graph1,[a,d]) == None
+
+def test_graph_depth_first():
+    graph1 = Graph()
+    a = graph1.add_node("A")
+    b = graph1.add_node("B")
+    c = graph1.add_node("C")
+    d = graph1.add_node("D")
+    graph1.add_edge(a,b)
+    graph1.add_edge(a,c)
+    graph1.add_edge(c,b)
+    graph1.add_edge(d,b)
+    graph1.add_edge(d,c)
+    assert graph1.depth_first(a) == [a,b,c,d]
     
     
 
