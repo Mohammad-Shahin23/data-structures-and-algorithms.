@@ -87,7 +87,25 @@ class Graph:
                      visited.append(neighbour.vertex)
                      queue.append(neighbour.vertex)
 
-         return returnd          
+         return returnd   
+    def depth_first(self, vertex):
+        """
+        This method returns a collection of nodes in the graph in depth-first order.
+        param vertex: the node to start the traversal from
+        returns: a collection of nodes in the graph in depth-first order
+        """
+        stack = [vertex]
+        visited = [vertex]
+        returnd = []
+        
+        while stack:
+            m = stack.pop(0)
+            returnd.append(m)
+            for neighbour in self.adj_list[m]:
+                if neighbour.vertex not in visited:
+                    visited.append(neighbour.vertex)
+                    stack.append(neighbour.vertex)
+        return returnd
     
 
     # def __str__(self):

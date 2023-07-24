@@ -25,7 +25,7 @@
 |  Class-31   | [Code-Challange-31](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/hash_tabel/hashmap_repeated_word.md) |
 |  Class-35   | [Code-Challange-35](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/hash_tabel/graphs/graph_cc35.md) |
 |  Class-37   | [Code-Challange-37](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/hash_tabel/graphs/graph_business_trip.py) |
-
+|  Class-38   | [Code-Challange-38](https://github.com/Mohammad-Shahin23/data-structures-and-algorithms./blob/main/hash_tabel/graphs/depth-first.md) |
 
 
 
